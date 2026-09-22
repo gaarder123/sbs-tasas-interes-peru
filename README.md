@@ -1,90 +1,54 @@
-\# Web Scraping de Tasas de Interés - SBS Perú
+# Web Scraping de Tasas de Interés - SBS Perú
 
+## Descripción
 
+Proyecto de web scraping desarrollado en Python para automatizar la extracción de las tasas de interés activas publicadas por la **Superintendencia de Banca, Seguros y AFP (SBS) del Perú**.
 
-Proyecto de web scraping desarrollado en Python para extraer las tasas de interés activas publicadas por la Superintendencia de Banca, Seguros y AFP (SBS) del Perú.
+El proyecto permite consultar la información publicada por la SBS para una fecha determinada y obtener las tasas correspondientes según la moneda y el grupo de crédito seleccionado.
 
+## Tecnologías utilizadas
 
+- **Python**
+- **SeleniumBase** – automatización e interacción con la página web.
+- **BeautifulSoup** – extracción y procesamiento del HTML.
+- **Pandas** – estructuración, limpieza y transformación de los datos.
+- **Jupyter Notebook** – desarrollo y documentación del proyecto.
 
-\## Tecnologías utilizadas
+## Funcionalidades
 
+El scraper permite consultar las tasas de interés utilizando tres parámetros:
 
+- **Fecha**
+- **Moneda**
+  - Moneda Nacional (MN)
+  - Moneda Extranjera (ME)
+- **Grupo de crédito**
 
-\- Python
+### Grupos de crédito
 
-\- SeleniumBase
+- Corporativos
+- Grandes Empresas
+- Medianas Empresas
+- Pequeñas Empresas
+- Microempresas
+- Consumo
+- Hipotecarios
 
-\- BeautifulSoup
+## Flujo del proyecto
 
-\- Pandas
-
-\- Jupyter Notebook
-
-
-
-\## Funcionalidades
-
-
-
-El proyecto permite consultar las tasas de interés según:
-
-
-
-\- Fecha
-
-\- Moneda
-
-\- Grupo de crédito
-
-
-
-\### Grupos de crédito
-
-
-
-\- Corporativos
-
-\- Grandes Empresas
-
-\- Medianas Empresas
-
-\- Pequeñas Empresas
-
-\- Microempresas
-
-\- Consumo
-
-\- Hipotecarios
-
-
-
-\### Monedas
-
-
-
-\- Moneda Nacional (MN)
-
-\- Moneda Extranjera (ME)
-
-
-
-\## Ejemplo de uso
-
-
-
-```python
-
-df\_corporativos = obtener\_tasas\_sbs(
-
-&#x20;   "15/09/2026",
-
-&#x20;   "MN",
-
-&#x20;   "Corporativos"
-
-)
-
-
-
-display(df\_corporativos)
-
+```text
+Página web de la SBS
+        ↓
+Selección de fecha
+        ↓
+Selección de moneda
+        ↓
+Extracción del HTML
+        ↓
+BeautifulSoup
+        ↓
+Identificación de tablas y categorías
+        ↓
+Pandas
+        ↓
+DataFrame estructurado
