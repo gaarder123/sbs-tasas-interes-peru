@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# VS Code
+.vscode/
+
+# Selenium
+uc_driver.exe
+
+# Datos locales
+data/
+*.csv
+*.xlsx
+
+# Sistema
+.DS_Store
+Thumbs.db
